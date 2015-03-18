@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :status
+  attr_accessible :name, :status, :role_id
 
   has_many :permissions, as: :permittable
-  has_one :role
+  belongs_to :role
 
 
   # only allow users with a valid name
