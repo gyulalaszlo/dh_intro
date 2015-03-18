@@ -13,7 +13,10 @@ user.role = Role.create( name: "Band leader")
 user.permissions.create( name: "Trumpet" )
 user.permissions.create( name: "Saxophone" )
 
-
 user.role.permissions.create( name: "Composition" )
 user.role.permissions.create( name: "Arrangement" )
 user.role.permissions.create( name: "Hire & fire" )
+
+
+# ex 3.4
+Role.create([{name: "Alpha"}, {name: "Alphonse"}, {name: "Beta"}])
