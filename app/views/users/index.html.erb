@@ -1,0 +1,10 @@
+<h1>All users</h1>
+<table>
+  <% @users.each do |user|  %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><b><%= user.name %></b></td>
+      <td><%= user.all_permissions.map(&:name).join(", ") %></td>
+    </tr>
+  <% end %>
+</table>
