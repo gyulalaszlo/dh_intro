@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   # Query all permissions of a user as in exercise 3.2
   def all_permissions
+    return permissions unless role
     permissions + role.permissions
   end
 end
